@@ -70,7 +70,7 @@ jobs:
       # because it is currently broken on GitHub's Ubuntu 22.04.
       run: |
         sudo apt-get update
-        bash build.sh init
+        sudo bash build.sh init
 
     - name: Generate build config
       run: >-
