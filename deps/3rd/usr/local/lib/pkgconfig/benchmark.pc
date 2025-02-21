@@ -1,0 +1,12 @@
+prefix=/Users/koschei/Project/mini-lsm/deps/3rd/usr/local
+exec_prefix=${prefix}
+libdir=/Users/koschei/Project/mini-lsm/deps/3rd/usr/local/lib
+includedir=/Users/koschei/Project/mini-lsm/deps/3rd/usr/local/include
+
+Name: benchmark
+Description: Google microbenchmark framework
+Version: 1.9.1.39
+
+Libs: -L${libdir} -lbenchmark
+Libs.private: -lpthread 
+Cflags: -I${includedir}

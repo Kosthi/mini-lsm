@@ -12,6 +12,8 @@ else ()
 endif ()
 message(STATUS "Install target dir is " ${CMAKE_INSTALL_PREFIX})
 
+set(CMAKE_PREFIX_PATH "${PROJECT_SOURCE_DIR}/deps/3rd/usr/local;/usr/local;${CMAKE_PREFIX_PATH}")
+
 if (EXISTS /usr/local/lib)
     link_directories(/usr/local/lib)
 endif ()

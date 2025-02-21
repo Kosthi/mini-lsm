@@ -1,0 +1,11 @@
+prefix=/Users/koschei/Project/mini-lsm/deps/3rd/usr/local
+exec_prefix=/Users/koschei/Project/mini-lsm/deps/3rd/usr/local
+libdir=${exec_prefix}/lib
+includedir=${prefix}/include
+
+Name: fmt
+Description: A modern formatting library
+Version: 11.1.3
+Libs: -L${libdir} -lfmt
+Cflags: -I${includedir}
+
