@@ -52,7 +52,7 @@ jobs:
         submodules: true
 
     - name: Install dependencies on Linux
-      if: ${{ runner.os == 'Linux' }}
+      if: ${{ runner.os == 'Linux' || runner.os == 'macOS' }}
       # libgoogle-perftools-dev is temporarily removed from the package list
       # because it is currently broken on GitHub's Ubuntu 22.04.
       run: |
