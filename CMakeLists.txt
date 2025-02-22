@@ -21,7 +21,7 @@ if (EXISTS /usr/local/lib64)
     link_directories(/usr/local/lib64)
 endif ()
 
-include_directories(. ${PROJECT_SOURCE_DIR}/deps/3rd/usr/local/include /usr/local/include)
+include_directories(. ${PROJECT_SOURCE_DIR}/deps ${PROJECT_SOURCE_DIR}/deps/3rd/usr/local/include /usr/local/include)
 
 add_subdirectory(deps)
 add_subdirectory(test)
