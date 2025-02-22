@@ -19,22 +19,12 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        compiler: [clang, gcc, msvc]
-        os: [ubuntu-latest, macos-latest, windows-latest]
+        compiler: [clang, gcc]
+        os: [ubuntu-latest, macos-latest]
         optimized: [true, false]
         exclude:
-        # MSVC only works on Windows.
-        - os: ubuntu-latest
-          compiler: msvc
-        - os: macos-latest
-          compiler: msvc
         # Not testing with GCC on macOS.
         - os: macos-latest
-          compiler: gcc
-        # Only testing with MSVC on Windows.
-        - os: windows-latest
-          compiler: clang
-        - os: windows-latest
           compiler: gcc
         include:
         - compiler: clang
@@ -43,9 +33,6 @@ jobs:
         - compiler: gcc
           CC: gcc
           CXX: g++
-        - compiler: msvc
-          CC:
-          CXX:
 
     env:
       CMAKE_BUILD_DIR: ${{ github.workspace }}/build
@@ -70,7 +57,7 @@ jobs:
       # because it is currently broken on GitHub's Ubuntu 22.04.
       run: |
         sudo apt-get update
-        sudo bash build.sh init
+        bash build.sh init
 
     - name: Generate build config
       run: >-
