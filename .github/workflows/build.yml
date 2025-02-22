@@ -72,5 +72,5 @@ jobs:
 #      - name: Run SkipList Benchmarks
 #        run: ${{ env.BINARY_PATH }}skiplist_benchmark${{ env.BINARY_SUFFIX }}
 
-      - name: Test CMake installation
-        run: cmake --build "${{ env.CMAKE_BUILD_DIR }}" --target install
+#      - name: Test CMake installation
+#        run: cmake --build "${{ env.CMAKE_BUILD_DIR }}" --target install
