@@ -1,4 +1,3 @@
-enable_testing()
 find_package(GTest REQUIRED)
 if (GTEST_FOUND)
     message(STATUS "GTest found: ${GTEST_LIBRARIES}")

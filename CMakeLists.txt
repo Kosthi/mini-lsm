@@ -29,3 +29,5 @@ include_directories(. ${PROJECT_SOURCE_DIR}/deps ${PROJECT_SOURCE_DIR}/deps/3rd/
 add_subdirectory(deps)
 add_subdirectory(test)
 add_subdirectory(src)
+
+enable_testing()
